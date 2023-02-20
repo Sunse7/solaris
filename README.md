@@ -1,1 +1,3 @@
-# solaris
+# Solaris
+
+### Charlotte Magnusson
