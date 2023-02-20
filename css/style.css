@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Roboto:wght@300&family=Secular+One&display=swap');
+
+:root {
+    --header: 'Secular One';
+    --header-small: 'Lora';
+    --primary-color: #FFF;
+    --secondary-color: #FFD029;
+    --weight-reg: 400;
+    --weight-thin: 300;
+}
+
+body {
+    background: linear-gradient(90deg, #0C164D 0%, #190B22 100%);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+header input {
+    display: flex;
+    align-self: center;
+    margin-bottom: 7rem;
+}
+
+h2 {
+    font-family: var(--header);
+    color: var(--primary-color);
+    font-weight: var(--weight-reg);
+}
+
+h4 {
+    font-family: var(--header-small);
+    color: var(--secondary-color);
+    font-weight: var(--weight-reg);
+}
+
+section {
+    color: var(--primary-color);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+article p {
+    text-align: center;
+}
+
+article div {
+    border-radius: 50%;
+}
+
+.solen {
+    width: 15rem;
+    height: 15rem;
+    background-color: #FFD029;
+}
+
+.merkurius {
+    width: 1rem;
+    height: 1rem;
+    background-color: #888888;
+}
+
+.venus {
+    width: 2rem;
+    height: 2rem;
+    background-color: #E7CDCD;
+}
+
+.jorden {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #428ED5;
+}
+
+.mars {
+    width: 1rem;
+    height: 1rem;
+    background-color: #EF5F5F;
+}
+
+.jupiter {
+    width: 12rem;
+    height: 12rem;
+    background-color: #E29468;
+}
+
+.saturnus {
+    width: 9rem;
+    height: 9rem;
+    background-color: #C7AA72;
+}
+
+.uranus {
+    width: 4rem;
+    height: 4rem;
+    background-color: #C9D4F1;
+}
+
+.neptunus {
+    width: 4rem;
+    height: 4rem;
+    background-color: #7A91A7;
+}
