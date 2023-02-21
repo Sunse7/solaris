@@ -1,7 +1,11 @@
 const API_URL = 'https://majazocom.github.io/Data/solaris.json';
 
 
-getPlanets();
+if (window.location.href == 'http://127.0.0.1:5500/html/planet-info.html') {
+    renderSelectedPlanetToUI();
+} else {
+    getPlanets();
+}
 
 function getPlanets() {
     fetch(API_URL)
@@ -28,11 +32,8 @@ function renderPlanetsToUI(planets) {
 function onPlanetClick(element, item) {
     element.addEventListener('click', () => {
         console.log(`Wow ${item.name}`);
-        try {
-            renderSelectedPlanetToUI();
-        } catch (e) {
-            console.log(e);
-        }
+        localStorage.setItem('currentPlanet', JSON.stringify(item));
+        window.location.href = 'planet-info.html';
     });
 }
 
@@ -61,9 +62,6 @@ function searchPlanet(planets) {
     });
 }
 
-
-
-
 function renderSelectedPlanetToUI() {
     let planetNameEl = document.querySelector('.planet--name');
     let planetLatinNameEl = document.querySelector('.planet--latin-name');
@@ -75,6 +73,13 @@ function renderSelectedPlanetToUI() {
     let planetMoonsEl = document.querySelector('.planet--moons');
 
     let planetToShow = JSON.parse(localStorage.getItem('currentPlanet'));
-    console.log(planetToShow);
+
     planetNameEl.innerHTML = `${planetToShow.name}`;
+    planetLatinNameEl.innerHTML = `${planetToShow.latinName}`;
+    planetDescriptionEl.innerHTML = `${planetToShow.desc}`;
+    planetCircumferenceEl.innerHTML = `${planetToShow.circumference}`;
+    planetDistanceEl.innerHTML = `${planetToShow.distance} km`;
+    planetMaxTempEl.innerHTML = `${planetToShow.temp.day}`;
+    planetMinTempEl.innerHTML = `${planetToShow.temp.night}`;
+    planetMoonsEl.innerHTML = `${planetToShow.moons}`; //Loop?
 }
