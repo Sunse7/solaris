@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Roboto:wght@300&family=Secular+One&display=swap');
 
 :root {
+    color: #FFF;
     --header: 'Secular One';
     --header-small: 'Lora';
-    --primary-color: #FFF;
+    --text: 'Roboto';
     --secondary-color: #FFD029;
     --weight-reg: 400;
     --weight-thin: 300;
@@ -17,17 +18,11 @@ header {
     display: flex;
     flex-direction: column;
     align-items: end;
-}
-
-header input {
-    display: flex;
-    align-self: center;
-    margin-bottom: 7rem;
+    margin-right: 5rem;
 }
 
 h2 {
     font-family: var(--header);
-    color: var(--primary-color);
     font-weight: var(--weight-reg);
 }
 
@@ -37,8 +32,25 @@ h4 {
     font-weight: var(--weight-reg);
 }
 
+#search-input {
+    align-self: center;
+    margin-bottom: 0.5rem;
+}
+
+#search-btn {
+    align-self: center;
+    margin-bottom: 7rem;
+}
+
+.show-result {
+    align-self: center;
+    margin-bottom: 0.5rem;
+    font-family: var(--text);
+    font-weight: var(--weight-reg);
+    text-decoration: none;
+}
+
 section {
-    color: var(--primary-color);
     display: flex;
     justify-content: space-evenly;
 }
