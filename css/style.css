@@ -6,6 +6,7 @@
     --header-small: 'Lora';
     --text: 'Roboto';
     --secondary-color: #FFD029;
+    --error-color: #a20707;
     --weight-reg: 400;
     --weight-thin: 300;
 }
@@ -115,4 +116,8 @@ article div {
     width: 4rem;
     height: 4rem;
     background-color: #7A91A7;
+}
+
+.error-msg {
+    color: var(--error-color);
 }
