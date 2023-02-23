@@ -102,14 +102,14 @@ function renderSelectedPlanetToUI() {
         planetMinTempEl.innerHTML = `${planetToShow.temp.night}`;
         planetMoonsEl.innerHTML = `${planetToShow.moons}`; //Loop?
 
-        onForwardClick(planetToShow);
-        onBackClick(planetToShow);
+        onNextPlanetClick(planetToShow);
+        onPreviousPlanetClick(planetToShow);
     } catch {
         errorMessageEl.innerHTML = 'No planet found :( <br> Go back to all planets';
     }
 }
 
-function onBackClick(currentPlanet) {
+function onPreviousPlanetClick(currentPlanet) {
     let prevEl = document.querySelector('.planet--previous');
     prevEl.addEventListener('click', () => {
         let index = planetArray.findIndex(p => p.id === currentPlanet.id);
@@ -117,7 +117,7 @@ function onBackClick(currentPlanet) {
     });
 }
 
-function onForwardClick(currentPlanet) {
+function onNextPlanetClick(currentPlanet) {
     let nextEl = document.querySelector('.planet--next');
     nextEl.addEventListener('click', () => {
         let index = planetArray.findIndex(p => p.id === currentPlanet.id);
