@@ -121,3 +121,37 @@ article div {
 .error-msg {
     color: var(--error-color);
 }
+
+.wrapper {
+    
+}
+
+.planet-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.planet--name {}
+
+.planet--latin-name {}
+
+.planet--description {
+    max-width: 30rem;
+}
+
+.planet--circumference {}
+
+.planet--distance {}
+
+.planet--max-temp {}
+
+.planet--min-temp {}
+
+.planet--moons {}
+
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+}
