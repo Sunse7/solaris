@@ -122,15 +122,17 @@ article div {
     color: var(--error-color);
 }
 
-.wrapper {
-    
-}
-
 .planet-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.planet-container a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-family: var(--text);
 }
 
 .planet--name {}
@@ -139,19 +141,41 @@ article div {
 
 .planet--description {
     max-width: 30rem;
+    font-family: var(--text);
+    line-height: 1.7;
+    margin-bottom: 2rem;
 }
 
-.planet--circumference {}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 7rem;
+    row-gap: 2rem;
+}
 
-.planet--distance {}
+.wrapper div {
+    display: flex;
+    flex-direction: column;
+}
 
-.planet--max-temp {}
+.wrapper h6 {
+    font-family: var(--header-small);
+    font-size: 0.8rem;
+    margin: 0;
+}
 
-.planet--min-temp {}
-
-.planet--moons {}
+.planet--circumference,
+.planet--distance,
+.planet--max-temp,
+.planet--min-temp,
+.planet--moons {
+    font-family: var(--text);
+}
 
 .pagination-container {
-    display: flex;
-    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.pagination--previous {
+    margin-right: 18rem;
 }
