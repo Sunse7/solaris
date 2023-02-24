@@ -54,6 +54,7 @@ h4 {
 .planets-container {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 article div {
@@ -61,57 +62,66 @@ article div {
 }
 
 .solen {
-    width: 15rem;
-    height: 15rem;
+    width: 20rem;
+    height: 20rem;
     background-color: #FFD029;
+    box-shadow: 0px -2px 27px 8px rgba(255,208,41,0.75);
 }
 
 .merkurius {
     width: 1rem;
     height: 1rem;
     background-color: #888888;
+    box-shadow: -14px 14px 18px -20px rgba(25,25,25,0.9) inset;
 }
 
 .venus {
     width: 2rem;
     height: 2rem;
     background-color: #E7CDCD;
+    box-shadow: -14px 14px 18px -13px rgba(25,25,25,0.9) inset;
 }
 
 .jorden {
     width: 2.5rem;
     height: 2.5rem;
     background-color: #428ED5;
+    box-shadow: -14px 14px 18px -13px rgba(25,25,25,0.9) inset;
 }
 
 .mars {
     width: 1rem;
     height: 1rem;
     background-color: #EF5F5F;
+    box-shadow: -14px 14px 18px -20px rgba(25,25,25,0.9) inset;
 }
 
 .jupiter {
     width: 12rem;
     height: 12rem;
     background-color: #E29468;
+    box-shadow: -22px 15px 18px 11px rgba(25,25,25,0.4) inset;
 }
 
 .saturnus {
     width: 9rem;
     height: 9rem;
     background-color: #C7AA72;
+    box-shadow: -22px 15px 18px 11px rgba(25,25,25,0.4) inset;
 }
 
 .uranus {
     width: 4rem;
     height: 4rem;
     background-color: #C9D4F1;
+    box-shadow: -14px 15px 18px -5px rgba(25,25,25,0.7) inset;
 }
 
 .neptunus {
     width: 4rem;
     height: 4rem;
     background-color: #7A91A7;
+    box-shadow: -14px 15px 18px -5px rgba(25,25,25,0.7) inset;
 }
 
 .error-msg {
@@ -122,7 +132,6 @@ article div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 .planet-container a {
@@ -130,10 +139,6 @@ article div {
     color: var(--secondary-color);
     font-family: var(--text);
 }
-
-.planet--name {}
-
-.planet--latin-name {}
 
 .planet--description {
     max-width: 30rem;
@@ -147,6 +152,7 @@ article div {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 15rem;
     row-gap: 2rem;
+    max-width: 30rem;
 }
 
 .wrapper div {
