@@ -87,7 +87,7 @@ function renderSelectedPlanetToUI() {
         planetDistanceEl.innerHTML = `${planetToShow.distance} km`;
         planetMaxTempEl.innerHTML = `${planetToShow.temp.day}`;
         planetMinTempEl.innerHTML = `${planetToShow.temp.night}`;
-        planetMoonsEl.innerHTML = `${planetToShow.moons}`; 
+        planetMoonsEl.innerHTML = `${planetToShow.moons.map(moon => `${moon}`).join(',  ')}`; 
 
         onNextPlanetClick(planetToShow);
         onPreviousPlanetClick(planetToShow);
