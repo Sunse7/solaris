@@ -51,13 +51,9 @@ h4 {
     text-decoration: none;
 }
 
-section {
+.planets-container {
     display: flex;
     justify-content: space-evenly;
-}
-
-article p {
-    text-align: center;
 }
 
 article div {
@@ -126,7 +122,7 @@ article div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    
 }
 
 .planet-container a {
@@ -149,7 +145,7 @@ article div {
 .wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 7rem;
+    column-gap: 15rem;
     row-gap: 2rem;
 }
 
@@ -170,6 +166,10 @@ article div {
 .planet--min-temp,
 .planet--moons {
     font-family: var(--text);
+}
+
+.moons-container {
+    grid-column: span 2;
 }
 
 .pagination-container {
