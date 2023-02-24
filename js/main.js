@@ -10,7 +10,6 @@ if (window.location.href.includes('planet-info')) {
 }
 
 function getPlanetsAndPushToArray() {
-    try {
         fetch(API_URL)
         .then(respons => respons.json())
         .then(data => {
@@ -18,25 +17,16 @@ function getPlanetsAndPushToArray() {
                 planetArray.push(planet);
             })
         });
-    }
-    catch {
-        errorMessageEl.innerHTML = 'Something went wrong...';
-    }
 }
 
 function getPlanets() {
-    try {
         fetch(API_URL)
         .then(respons => respons.json())
         .then(data => {
-           getPlanetsAndPushToArray();
+        //    getPlanetsAndPushToArray(); //Needed?
             renderPlanetsToUI(data);
             searchPlanet(data);
         });
-    }
-    catch {
-        errorMessageEl.innerHTML = 'Something went wrong...';
-    }
 }
 
 function renderPlanetsToUI(planets) {
@@ -71,8 +61,7 @@ function searchPlanet(planets) {
             showResultEl.style.color = 'white';
             showResultEl.href = 'planet-info.html';
             showResultEl.innerHTML = `Take me to: ${planets[planetIndex].name}`;
-            localStorage.setItem('currentPlanet', JSON.stringify(planets[planetIndex]));
-            onPlanetClick(showResultEl);
+            onPlanetClick(showResultEl, planets[planetIndex]);
         } catch {
             showResultEl.style.color = 'red';
             showResultEl.innerHTML = `That is not a planet :( <br>
@@ -110,7 +99,7 @@ function renderSelectedPlanetToUI() {
 }
 
 function onPreviousPlanetClick(currentPlanet) {
-    let prevEl = document.querySelector('.planet--previous');
+    let prevEl = document.querySelector('.pagination--previous');
     prevEl.addEventListener('click', () => {
         let index = planetArray.findIndex(p => p.id === currentPlanet.id);
         localStorage.setItem('currentPlanet', JSON.stringify(planetArray[index -1]))
@@ -118,7 +107,7 @@ function onPreviousPlanetClick(currentPlanet) {
 }
 
 function onNextPlanetClick(currentPlanet) {
-    let nextEl = document.querySelector('.planet--next');
+    let nextEl = document.querySelector('.pagination--next');
     nextEl.addEventListener('click', () => {
         let index = planetArray.findIndex(p => p.id === currentPlanet.id);
         localStorage.setItem('currentPlanet', JSON.stringify(planetArray[index + 1]))
