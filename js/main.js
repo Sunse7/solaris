@@ -100,7 +100,10 @@ function onPreviousPlanetClick(currentPlanet) {
     let prevEl = document.querySelector('.pagination--previous');
     prevEl.addEventListener('click', () => {
         let index = planetArray.findIndex(p => p.id === currentPlanet.id);
-        localStorage.setItem('currentPlanet', JSON.stringify(planetArray[index -1]))
+       
+        if (index > 0) {
+            localStorage.setItem('currentPlanet', JSON.stringify(planetArray[index -1]));
+        } 
     });
 }
 
@@ -108,6 +111,11 @@ function onNextPlanetClick(currentPlanet) {
     let nextEl = document.querySelector('.pagination--next');
     nextEl.addEventListener('click', () => {
         let index = planetArray.findIndex(p => p.id === currentPlanet.id);
-        localStorage.setItem('currentPlanet', JSON.stringify(planetArray[index + 1]))
+
+        if (index < 8) {
+            localStorage.setItem('currentPlanet', JSON.stringify(planetArray[index + 1]));
+        }
     });
 }
+
+
