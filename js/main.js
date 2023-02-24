@@ -33,7 +33,6 @@ function renderPlanetsToUI(planets) {
     planets.forEach(planet => {
         let planetBoxEl = document.createElement('article');
         planetBoxEl.innerHTML = `
-        <p>${planet.name}</p>
         <div class="${planet.name.toLowerCase()}"></div>
         `;
         planetsContainerEl.appendChild(planetBoxEl);
