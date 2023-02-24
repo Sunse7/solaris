@@ -23,7 +23,6 @@ function getPlanets() {
         fetch(API_URL)
         .then(respons => respons.json())
         .then(data => {
-        //    getPlanetsAndPushToArray(); //Needed?
             renderPlanetsToUI(data);
             searchPlanet(data);
         });
@@ -89,7 +88,7 @@ function renderSelectedPlanetToUI() {
         planetDistanceEl.innerHTML = `${planetToShow.distance} km`;
         planetMaxTempEl.innerHTML = `${planetToShow.temp.day}`;
         planetMinTempEl.innerHTML = `${planetToShow.temp.night}`;
-        planetMoonsEl.innerHTML = `${planetToShow.moons}`; //Loop?
+        planetMoonsEl.innerHTML = `${planetToShow.moons}`; 
 
         onNextPlanetClick(planetToShow);
         onPreviousPlanetClick(planetToShow);
